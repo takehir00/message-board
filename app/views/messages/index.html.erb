@@ -11,16 +11,20 @@
      <% end %>
      </div>
 </div>
+<div class="form-inline">
 <%= form_for(@message) do |f| %>
+  <div class="form-group">
+  名前：
 
-名前：
+  <%= f.text_field :name, class: "form-control"%>
+  </div>
+  <dix class="form-group">
+  内容：
 
-<%= f.text_field :name %>
+  <%= f.text_area :body, class: "form-control", size: "50x1"%>
+  </div>
 
-内容：
-
-<%= f.text_field :body %>
-
-<%= f.submit class: "btn btn-sm btn-primary" %>
+  <%= f.submit class: "btn btn-sm btn-primary" %>
 
 <% end %>
+</div>
